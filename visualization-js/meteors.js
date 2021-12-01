@@ -1,0 +1,1 @@
+export default ['meteor-1.png', 'coackroach-1.png'];

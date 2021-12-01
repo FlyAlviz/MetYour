@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="images/meteor-gif.gif" type="image/gif" />
+    <title>MET YOUR</title>
+  </head>
+  <body class="game-not-start">
+    <!-- <body class="game-not-start open-modal history-open"> -->
+    <div class="modal-view-container">
+      <div class="modal-view"></div>
+    </div>
+    <div class="loader">
+      <img src="./images/loader.gif" alt="loadingGif" />
+    </div>
+    <div class="game">
+      <header class="colorChangeColor status">
+        <marquee
+          class="GeneratedMarquee"
+          direction="left"
+          scrollamount="25"
+          behavior="scroll"
+          >PRESS
+          <span style="margin: 0 20px"
+            ><img
+              src="./images/enter-key.png"
+              alt="enter-key"
+              class="span-img-key" /></span
+          ><span style="margin: 0 20px"
+            ><img
+              src="./images/space-key.png"
+              alt="space-key"
+              class="span-img-key" /></span
+          >KEY TO START</marquee
+        >
+      </header>
+      <div class="arena borderChangeColor">
+        <ul>
+          <li>
+            <button type="button" name="start-up-btn" data-id="settings">
+              SETTINGS
+            </button>
+          </li>
+          <li>
+            <button type="button" name="start-up-btn" data-id="start">
+              START
+            </button>
+          </li>
+          <li>
+            <button type="button" name="start-up-btn" data-id="history">
+              HISTORY
+            </button>
+          </li>
+          <li>
+            <button type="button" name="start-up-btn" data-id="htp">
+              HOW TO PLAY
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./app.js" type="module" defer></script>
+  </body>
+</html>
