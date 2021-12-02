@@ -91,7 +91,7 @@ function saveSettingsLocalStorage(e) {
     this[pathName[0]][pathName[1]].active = checkInput.checked; 
     this[pathName[0]][pathName[1]].color = colorInput.value; 
 
-    document.documentElement.style.setProperty('--background-url', checkInput.checked ? colorInput.value :`url(${getLocalStorage('game_info').game_visual['visual-background'].src})`)
+    document.documentElement.style.setProperty('--background-url', checkInput.checked ? colorInput.value :`url(.${getLocalStorage('game_info').game_visual['visual-background'].src})`)
     small.textContent = colorInput.value;  
   }
 
