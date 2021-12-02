@@ -357,7 +357,7 @@ async function conclusion(status) {
    // status = won/defeated
    await showScoreBoard()
       const item = await getLocalStorage("game_info");
-      let id = item.gamePlay_info.length;
+      let id = item.gamePlay_info.length + 1;
       const scoreItem = {
          id,
          'date-initialized': Date.now(),

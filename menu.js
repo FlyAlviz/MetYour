@@ -427,7 +427,8 @@ function SETTINGS_FUNCTION() {
             const type = VISUAL_BODY_FLAG;
             const img = this.querySelector("img");
             const id = parseFloat(img.dataset.id);
-            const src = listOfImgs(type)[id]
+            const src = listOfImgs(type)[id];
+            console.log(src)
             const selected = { id, src, type };
             const info = getLocalStorage('game_info');
             info.game_visual[type] = selected;
