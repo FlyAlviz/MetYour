@@ -54,13 +54,11 @@ const defaultLS = {
   }
 }
 
-
-
 function getLocalStorage(key) { 
    if (key == 'game_info'){
       const info = localStorage.getItem(key)
       ? JSON.parse(localStorage.getItem(key))
-      : localStorage.setItem(JSON.stringify(defaultLS));
+      : localStorage.setItem(key,JSON.stringify(defaultLS));
       return info;
    }
 }
