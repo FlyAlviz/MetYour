@@ -1,6 +1,6 @@
 import { getLocalStorage } from "./localStorage.js";
 import './menu.js';
-getLocalStorage('game_info');
+
 document.documentElement.style.setProperty('--background-url', getLocalStorage('game_info')["custom-visual"]["custom-bg"].active ? getLocalStorage('game_info')["custom-visual"]["custom-bg"].color : `url(${getLocalStorage('game_info').game_visual['visual-background'].src})`)
 
 const $arena = document.querySelector('.arena');

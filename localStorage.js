@@ -48,7 +48,7 @@ const defaultLS = {
   },
   'custom-visual': {
      'custom-bg': {
-        active: false,
+        active: true,
         color: '#000000'
      }
   }
@@ -62,5 +62,6 @@ function getLocalStorage(key) {
   : defaultLS;
   return info;
 }
+localStorage.setItem('game_info', JSON.stringify(getLocalStorage('game_info')))
 
 export {getLocalStorage, defaultLS}
