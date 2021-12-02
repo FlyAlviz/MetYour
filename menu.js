@@ -206,14 +206,10 @@ const openArg = {
 'history': {
   name: 'history',
   textContent: `
-<button type="button" class="close-btn">
-<ion-icon name="close-outline"></ion-icon>
+   <button type="button" class="close-btn">
+  <ion-icon name="close-outline"></ion-icon>
 </button>
  
-         <button type="button" class="close-btn">
-         <ion-icon name="close-outline"></ion-icon>
-       </button>
-
        <section>
          <h1>Info</h1>
          <ul>
@@ -275,6 +271,7 @@ function openModal(select) {
       }
       window.addEventListener('click', funcx)
       const $closeBtn = document.body.querySelector('.close-btn');
+
       $closeBtn.onclick = remove_modal;
       if(select == 'settings') {
         SETTINGS_FUNCTION();
