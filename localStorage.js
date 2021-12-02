@@ -48,7 +48,7 @@ const defaultLS = {
   },
   'custom-visual': {
      'custom-bg': {
-        active: true,
+        active: false,
         color: '#000000'
      }
   }
