@@ -1,7 +1,8 @@
 import { getLocalStorage } from "./localStorage.js";
 import './menu.js';
+import setBG from "./setBG.js"
 
-document.documentElement.style.setProperty('--background-url', getLocalStorage('game_info')["custom-visual"]["custom-bg"].active ? getLocalStorage('game_info')["custom-visual"]["custom-bg"].color : `url(${getLocalStorage('game_info').game_visual['visual-background'].src})`)
+setBG()
 
 const $arena = document.querySelector('.arena');
 const $scoreBoard = document.querySelector('.status');
@@ -372,7 +373,7 @@ async function conclusion(status) {
       await item.gamePlay_info.push(scoreItem);
       await localStorage.setItem("game_info", JSON.stringify(item));
       await BG_AUDIO.pause();
-      await alert(`${status == 'defeated' ? 'You have been defeated!' + id : 'You won!'} Score: ${SCORE} `);
+      await alert(`${status == 'defeated' ? 'You have been defeated! GAME: ' + id : ' You won!'} Score: ${SCORE} `);
       window.location.reload();
 }
 

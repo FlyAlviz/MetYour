@@ -4,6 +4,7 @@ import lasers from "./visualization-js/lasers.js";
 import players from "./visualization-js/players.js";
 import backgrounds from "./visualization-js/backgrounds.js"
 import { getLocalStorage, defaultLS } from "./localStorage.js";
+import setBG  from "./setBG.js";
 
 Object.defineProperty(HTMLImageElement.prototype, "relativeSrc", {
   get: function relativeSrc() {
@@ -428,13 +429,12 @@ function SETTINGS_FUNCTION() {
             const img = this.querySelector("img");
             const id = parseFloat(img.dataset.id);
             const src = listOfImgs(type)[id];
-            console.log(src)
             const selected = { id, src, type };
             const info = getLocalStorage('game_info');
             info.game_visual[type] = selected;
             localStorage.setItem('game_info', JSON.stringify(info));
             if (type == 'visual-background') {
-              document.documentElement.style.setProperty('--background-url', getLocalStorage('game_info')['custom-visual']['custom-bg'].active ? getLocalStorage('game_info')['custom-visual']['custom-bg'].color :`url(${getLocalStorage('game_info').game_visual['visual-background'].src})`)
+             setBG()
 
             }
           }
@@ -457,7 +457,7 @@ function SETTINGS_FORM_FUNCTION() {
   defaultBtn.addEventListener('click', async function () {
     defaultLS.gamePlay_info = await getLocalStorage('game_info')['gamePlay_info'];
     await localStorage.setItem('game_info', JSON.stringify(defaultLS));
-    document.documentElement.style.setProperty('--background-url', getLocalStorage('game_info')['custom-visual']['custom-bg'].active ? getLocalStorage('game_info')['custom-visual']['custom-bg'].color :`url(${getLocalStorage('game_info').game_visual['visual-background'].src})`);
+    setBG()
     openModal('settings')
   })
   inputs.forEach((input) => {
