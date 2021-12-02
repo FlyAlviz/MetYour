@@ -424,10 +424,10 @@ function SETTINGS_FUNCTION() {
             var $activeBtn = document.querySelector('.bodies-li-active');
             $listImgs.forEach(li => li.classList.remove('display'))
             this.classList.add('display')
-            const img = this.querySelector("img");
-            const src = img.relativeSrc;
-            const id = parseFloat(img.dataset.id);
             const type = VISUAL_BODY_FLAG;
+            const img = this.querySelector("img");
+            const id = parseFloat(img.dataset.id);
+            const src = listOfImgs(type)[id]
             const selected = { id, src, type };
             const info = getLocalStorage('game_info');
             info.game_visual[type] = selected;
