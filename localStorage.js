@@ -57,10 +57,13 @@ const defaultLS = {
 
 
 function getLocalStorage(key) { 
-   const info = localStorage.getItem(key)
-  ? JSON.parse(localStorage.getItem(key))
-  : defaultLS;
-  return info;
+   if (key == 'game_info'){
+      const info = localStorage.getItem(key)
+      ? JSON.parse(localStorage.getItem(key))
+      : localStorage.setItem(JSON.stringify(defaultLS));
+      return info;
+   }
 }
+getLocalStorage('game_info')
 
 export {getLocalStorage, defaultLS}
