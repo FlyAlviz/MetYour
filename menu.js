@@ -335,10 +335,11 @@ function HISTORY_FUNCTION() {
       const ST = data["status"];
       const TG = data["target-score"];
       const UL = data["upgrade-level"];
-      const PA = data["player-acceleration"]
+      const PA = data["player-acceleration"];
+      const ID = data["id"];
       const seconds = Math.abs((D2.unix - D1.unix) / 1000);
       const html = `<article class="article-container">
-      <header class="data-title">GAME 1</header>
+      <header class="data-title">GAME ${ID}</header>
       <section class="gameInf-container">
         <section class="gameInf-1">
           <ul>
