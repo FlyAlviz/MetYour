@@ -64,6 +64,6 @@ function getLocalStorage(key) {
       return info;
    }
 }
-getLocalStorage('game_info')
+
 
 export {getLocalStorage, defaultLS}

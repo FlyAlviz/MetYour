@@ -1,7 +1,7 @@
 import { getLocalStorage } from "./localStorage.js";
 import './menu.js';
 import setBG from "./setBG.js"
-
+getLocalStorage('game_info')
 setBG()
 
 const $arena = document.querySelector('.arena');
