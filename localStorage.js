@@ -62,6 +62,5 @@ function getLocalStorage(key) {
   : defaultLS;
   return info;
 }
-localStorage.setItem('game_info', JSON.stringify(getLocalStorage('game_info')))
 
 export {getLocalStorage, defaultLS}
