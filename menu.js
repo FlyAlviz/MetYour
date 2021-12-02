@@ -27,8 +27,6 @@ function listOfImgs(name) {
   })
 }
 
-
-
 const $modalView = document.querySelector('.modal-view');
 const $startUpBtns = Array.from(document.querySelectorAll('button[name=start-up-btn]'));
 
@@ -432,7 +430,6 @@ function SETTINGS_FUNCTION() {
             const selected = { id, src, type };
             const info = getLocalStorage('game_info');
             info.game_visual[type] = selected;
-
             localStorage.setItem('game_info', JSON.stringify(info));
             if (type == 'visual-background') {
               document.documentElement.style.setProperty('--background-url', getLocalStorage('game_info')['custom-visual']['custom-bg'].active ? getLocalStorage('game_info')['custom-visual']['custom-bg'].color :`url(${getLocalStorage('game_info').game_visual['visual-background'].src})`)

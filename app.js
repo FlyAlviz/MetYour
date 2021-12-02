@@ -1,12 +1,10 @@
 import { getLocalStorage } from "./localStorage.js";
 import './menu.js';
-getLocalStorage('game_info')
+getLocalStorage('game_info');
 document.documentElement.style.setProperty('--background-url', getLocalStorage('game_info')["custom-visual"]["custom-bg"].active ? getLocalStorage('game_info')["custom-visual"]["custom-bg"].color : `url(${getLocalStorage('game_info').game_visual['visual-background'].src})`)
-
 
 const $arena = document.querySelector('.arena');
 const $scoreBoard = document.querySelector('.status');
-
 
 const KEY_CODE_SPACE = 32;
 
@@ -149,7 +147,7 @@ function createLaser(x,y) {
 }
 
 function createTemplate(size,x,y) {
-
+   // creates coordinate trace
    const div = document.createElement('div');
    div.classList.add('template')
    div.style.height = `${size}px`;
@@ -159,7 +157,6 @@ function createTemplate(size,x,y) {
    $arena.appendChild(div)
    template = document.querySelector('.template');
 }
-
 
 function createBlast(x,y) {
    y -= BLAST_HEIGHT / 2;
