@@ -77,8 +77,6 @@ function saveSettingsLocalStorage(e) {
   const small = input.parentElement.querySelector('small');
   small.textContent = `${input.type != 'range' ? '' : input.value}`;
 
-  console.log(input.value)
-
   const pathName = input.dataset.pathname.split('/');
   if(pathName.includes('game-audio')){
     this[pathName[0]][pathName[1]].volume = parseFloat(input.value);
@@ -429,7 +427,6 @@ function SETTINGS_FUNCTION() {
             this.classList.add('display')
             const img = this.querySelector("img");
             const src = img.relativeSrc;
-            console.log(src)
             const id = parseFloat(img.dataset.id);
             const type = VISUAL_BODY_FLAG;
             const selected = { id, src, type };

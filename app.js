@@ -109,7 +109,6 @@ function createPlayer() {
    GAME_STATE.playerX =  (ARENA_WIDTH / 2) - (PLAYER_WIDTH / 2);
    let $player = new Image;
    const src =  getLocalStorage('game_info').game_visual['visual-player'].src
-   console.log(src)
    $player.src = src;
    $player.classList.add('player');
    $arena.appendChild($player);
